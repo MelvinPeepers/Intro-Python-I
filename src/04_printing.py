@@ -22,4 +22,5 @@ print(string_method.format(x, y, z))
 
 
 # Finally, print the same thing using an f-string
-# print()
+# https://realpython.com/python-f-strings/#f-strings-a-new-and-improved-way-to-format-strings-in-python
+print(f"x is {x}, y is {y}, z is '{z}'")
