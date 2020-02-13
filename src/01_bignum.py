@@ -4,4 +4,4 @@
 # YOUR CODE HERE
 print(2**65536)
 
-# in JS I get Infinity
+# in JS I get Infinity with console.log(2**65546)
