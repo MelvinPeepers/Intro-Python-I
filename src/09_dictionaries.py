@@ -48,6 +48,12 @@ print(waypoints)
 # waypoints list.
 
 # YOUR CODE HERE
+waypoints[0]["lon"] = -130
+waypoints[0]["name"] = "not a real place"
+print(waypoints)
 
 # Write a loop that prints out all the field values for all the waypoints
+# https://www.geeksforgeeks.org/iterate-over-a-dictionary-in-python/
 # YOUR CODE HERE
+for points in waypoints:
+    print(points)
