@@ -9,12 +9,10 @@ UPER
 https://www.pythonforbeginners.com/system/python-sys-argv
 "With the len(sys.argv) function you can count the number of arguments."
 https://www.pythonforbeginners.com/argv/more-fun-with-sys-argv
+https://www.geeksforgeeks.org/calendar-in-python/
 
 conditional statements in Python
-https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-python-3-2
-
-
- The operator '!=' in python takes the thing on the left hand side of itself and the thing on the right hand side of itself, and returns True if they are not equal, and false if they are equal.
+https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-python-3-2"
 
 ##
 ** Plan
@@ -29,10 +27,10 @@ and does the following:
    print the calendar for the current month. The 'datetime'
    module may be helpful for this.
    ** 
-    no input: print datetime current month - this will go last if none of the conditions are meet.
+    if no input: print datetime current month - this will go last if none of the conditions are meet.
    ** 
 
- - If the user specifies one argument, assume they passed in a
+ - elif the user specifies one argument, assume they passed in a
    month and render the calendar for that month of the current year.
    ** 
    if len(sys.argv) == 1 datetime month - this will go first - if user specifies 1 argument print calendar for that month and current year.
@@ -67,16 +65,13 @@ d = datetime.today()
 y = (d.year)
 m = (d.month)
 
-ui = int(input("Input the year : "))
-uim = int(input("Input the month : "))
+print(len(sys.argv))
 
-print(calendar.month(ui, uim))
-
-# if len(sys.argv) == 1:
-#     print(calendar.month(y, m))
-# elif len(sys.argv) == 2:
-#     print(calendar.month(y, m))
-# elif len(sys.argv) == 3:
-#     print(calendar.month(y, m))
-# else:
-#     print('Program expects arguments to be given [month] [year]')
+if len(sys.argv) == 1:
+    print(calendar.month(y, m))
+elif len(sys.argv) == 2:
+    print(calendar.month(y, m))
+elif len(sys.argv) == 3:
+    print(calendar.month(y, m))
+else:
+    print('Program expects arguments to be given [month] [year]')
