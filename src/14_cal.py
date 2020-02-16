@@ -3,20 +3,52 @@ The Python standard library's 'calendar' module allows you to
 render a calendar to your terminal.
 https://docs.python.org/3.6/library/calendar.html
 
+UPER
+
+## Understand
+https://www.pythonforbeginners.com/system/python-sys-argv
+"With the len(sys.argv) function you can count the number of arguments."
+https://www.pythonforbeginners.com/argv/more-fun-with-sys-argv
+
+conditional statements in Python
+https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-python-3-2
+
+
+ The operator '!=' in python takes the thing on the left hand side of itself and the thing on the right hand side of itself, and returns True if they are not equal, and false if they are equal.
+
+##
+** Plan
+Code itself is the Execute
+Reflect
+
 Write a program that accepts user input of the form
   `14_cal.py [month] [year]`
 and does the following:
+
  - If the user doesn't specify any input, your program should
    print the calendar for the current month. The 'datetime'
    module may be helpful for this.
+   ** 
+    no input: print datetime current month - this will go last if none of the conditions are meet.
+   ** 
+
  - If the user specifies one argument, assume they passed in a
    month and render the calendar for that month of the current year.
+   ** 
+   if len(sys.argv) == 1 datetime month - this will go first - if user specifies 1 argument print calendar for that month and current year.
+   **
+
  - If the user specifies two arguments, assume they passed in
    both the month and the year. Render the calendar for that
    month and year.
+  ** 
+  elif len(sys.argv) == 2 datetime month year - if users specifies 2 arguments print calander for that month and year.
+  **
+
  - Otherwise, print a usage statement to the terminal indicating
    the format that your program expects arguments to be given.
    Then exit the program.
+   ** else 
 
 Note: the user should provide argument input (in the initial call to run the file) and not 
 prompted input. Also, the brackets around year are to denote that the argument is
@@ -30,3 +62,21 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+d = datetime.today()
+y = (d.year)
+m = (d.month)
+
+ui = int(input("Input the year : "))
+uim = int(input("Input the month : "))
+
+print(calendar.month(ui, uim))
+
+# if len(sys.argv) == 1:
+#     print(calendar.month(y, m))
+# elif len(sys.argv) == 2:
+#     print(calendar.month(y, m))
+# elif len(sys.argv) == 3:
+#     print(calendar.month(y, m))
+# else:
+#     print('Program expects arguments to be given [month] [year]')
