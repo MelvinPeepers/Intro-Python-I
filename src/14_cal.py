@@ -70,8 +70,8 @@ print(len(sys.argv))
 if len(sys.argv) == 1:
     print(calendar.month(y, m))
 elif len(sys.argv) == 2:
-    print(calendar.month(y, m))
+    print(calendar.month(y, int(sys.argv[1])))
 elif len(sys.argv) == 3:
-    print(calendar.month(y, m))
+    print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
 else:
     print('Program expects arguments to be given [month] [year]')
