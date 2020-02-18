@@ -26,21 +26,24 @@ and does the following:
  - If the user doesn't specify any input, your program should
    print the calendar for the current month. The 'datetime'
    module may be helpful for this.
+
    **
-    if no input: print datetime current month - this will go last if none of the conditions are meet.
+   if len(sys.argv) == 1 datetime month - this will go first - if user specifies 1 argument print calendar for that month and current year.
    **
 
  - elif the user specifies one argument, assume they passed in a
    month and render the calendar for that month of the current year.
+
    **
-   if len(sys.argv) == 1 datetime month - this will go first - if user specifies 1 argument print calendar for that month and current year.
+   elif len(sys.argv) == 2 datetime month year - if users specifies 2 arguments print calander for that month and year.
    **
 
  - If the user specifies two arguments, assume they passed in
    both the month and the year. Render the calendar for that
    month and year.
+   
   **
-  elif len(sys.argv) == 2 datetime month year - if users specifies 2 arguments print calander for that month and year.
+  elif len(sys.argv) == 3 datetime month year - if users specifies 2 arguments print calander for that month and year.
   **
 
  - Otherwise, print a usage statement to the terminal indicating
@@ -106,3 +109,4 @@ elif len(args) == 3:
 # Otherwise, print an error with usage hint
 else:
     print("Error: Commands must be in the form `14_cal.py [month] [year]`")
+    exit()
