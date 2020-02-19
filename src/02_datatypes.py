@@ -14,8 +14,22 @@ y = "7"
 # Write a print statement that combines x + y into the integer value 12
 
 # YOUR CODE HERE
+# print(x + y)
 
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+print(str(x) + y)
+
+
+# https://www.journaldev.com/23642/python-concatenate-string-and-int
+# Using str() function
+
+# The easiest way is to convert int to a string using str() function.
+
+# s = 'Year is '
+
+# y = 2018
+
+# print(s + str(y))
