@@ -28,7 +28,7 @@ def f2(*args):
     return sum
 
 # def f2(*args):
-#     return sum(argv) <-- from Brady Fukumoto's lecture https://www.geeksforgeeks.org/args-kwargs-python/
+#     return sum(args) <-- from Brady Fukumoto's lecture https://www.geeksforgeeks.org/args-kwargs-python/
 
 
 # print(f2(1))                    # Should print 1
