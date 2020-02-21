@@ -27,11 +27,14 @@ def f2(*args):
         sum += num
     return sum
 
+# def f2(*args):
+#     return sum(argv) <-- from Brady Fukumoto's lecture https://www.geeksforgeeks.org/args-kwargs-python/
 
-print(f2(1))                    # Should print 1
-print(f2(1, 3))                 # Should print 4
-print(f2(1, 4, -12))            # Should print -7
-print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
+
+# print(f2(1))                    # Should print 1
+# print(f2(1, 3))                 # Should print 4
+# print(f2(1, 4, -12))            # Should print -7
+# print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 
 a = [7, 6, 5, 4]
 
@@ -42,6 +45,7 @@ print(f2(*a))    # Should print 22
 # it returns that value plus 1. If two arguments, it returns the sum of the
 # arguments.
 # Note: Google "python default arguments" for a hint.
+# https://www.programiz.com/python-programming/function-argument
 
 # YOUR CODE HERE
 
@@ -64,8 +68,11 @@ print(f3(8))     # Should print 9
 # https://www.geeksforgeeks.org/args-kwargs-python/
 # YOUR CODE HERE
 def f4(**kwargs):
-    for key, value in kwargs.items():
-        print("%s == %s" % (key, value))
+  # for key, value in kwargs.items(): my code
+    for key in kwargs:
+        #   print("%s == %s" % (key, value)) my code
+        # <--- Brady's solution I didn't think about fstring since I'm still new to using it and used the solution from geeksforgeeks
+        print(f"key: {key}, value: {kwargs[key]}")
 
 
 # Should print
@@ -84,5 +91,5 @@ d = {
     "hp": 3
 }
 
-# How do you have to modify the f4 call below to make this work?
+# # How do you have to modify the f4 call below to make this work?
 f4(**d)
